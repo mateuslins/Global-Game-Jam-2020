@@ -12,6 +12,6 @@ public class Bullet_Controller : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(new Vector2(Velocity * Time.deltaTime, 0));
+        //transform.Translate(new Vector2(Velocity * Time.deltaTime, 0));
     }
 }
