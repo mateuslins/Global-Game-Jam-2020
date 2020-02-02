@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public void NextScene()
     {
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Menu");
     }
     void FixedUpdate()
     {
@@ -82,12 +82,15 @@ public class PlayerController : MonoBehaviour
     public void IncreaseKillCount()
     {
         killCount += 1;
+        Debug.Log("numero de kills: " + killCount);
+        WinGame();
     }
 
     private void WinGame()
     {
-        if (killCount >= 20)
+        if (killCount >= 30)
         {
+            Debug.Log("Você venceu!");
             SceneManager.LoadScene("Scene1");
         }
     }
@@ -98,10 +101,12 @@ public class PlayerController : MonoBehaviour
         Debug.Log("O numero de peças é " + pieces);
     }
 
-    public void DropPieces()
+    public int DropPieces()
     {
+        int aux = pieces;
         pieces = 0;
         Debug.Log("Depositou todas as peças na torre");
+        return aux;
     }
     void Flip()
     {
