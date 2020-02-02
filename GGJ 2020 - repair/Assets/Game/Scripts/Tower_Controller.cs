@@ -14,18 +14,21 @@ public class Tower_Controller : MonoBehaviour
     {
 
     }
-
+    Vector3 lastenemypos;
     void Update()
     {
         time += Time.deltaTime;
+
         if (time >= 0.5)
         {
-            Shooting();
+            var enemy = GameObject.FindWithTag("Enemy");
+            if (enemy == null)
+            {
+                time = 0;
+                return;
+            }
+            Instantiate(bullet, new Vector3(spot.transform.position.x, spot.transform.position.y, spot.transform.position.z), spot.transform.rotation).GetComponent<Bullet_Controller>().Enemy = enemy;
             time = 0;
         }
-    }
-    void Shooting()
-    {
-        Instantiate(bullet, new Vector3(spot.transform.position.x, spot.transform.position.y, spot.transform.position.z),spot.transform.rotation);
     }
 }
