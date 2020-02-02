@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-//[RequireComponent(typeof(ColorOnHover))]
 public class Interactable : MonoBehaviour
 {
     public PlayerController player;
