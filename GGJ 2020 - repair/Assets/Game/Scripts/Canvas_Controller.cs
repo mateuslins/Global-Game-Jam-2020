@@ -14,7 +14,7 @@ public class Canvas_Controller : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("Game");
     }
     public void Credits()
     {

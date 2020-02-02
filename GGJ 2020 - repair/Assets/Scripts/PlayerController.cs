@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D body;
+
+    private int killCount = 0;
 
     //inventory
     public static int pieces = 0;
@@ -14,7 +17,7 @@ public class PlayerController : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
 
-    public float runSpeed = 20.0f;
+    public float runSpeed = 10.0f;
 
     void Start()
     {
@@ -38,6 +41,19 @@ public class PlayerController : MonoBehaviour
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
     
+    public void IncreaseKillCount()
+    {
+        killCount += 1;
+    }
+
+    private void WinGame()
+    {
+        if (killCount >= 20)
+        {
+            SceneManager.LoadScene("Scene1");
+        }
+    }
+
     public void CollectPiece()
     {
         pieces += 1;
