@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 745220934892326423}
   - component: {fileID: 5838812462277433002}
   - component: {fileID: 8230834320212714962}
+  - component: {fileID: 1414922890613620733}
   m_Layer: 0
   m_Name: DevilGFX
   m_TagString: Untagged
@@ -70,10 +71,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 14369858748f36b4f9af59527d32b349, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.2}
@@ -95,6 +96,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 7591607455862050589}
+--- !u!95 &1414922890613620733
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492884663808955744}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a7c7f193f4200146a9bce44632fb48a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6748786326923142733
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,9 +242,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0786695, y: -0.123059444}
+  m_Offset: {x: -0.2307949, y: -0.38781166}
   serializedVersion: 2
-  m_Radius: 0.20719685
+  m_Radius: 0.58320427
 --- !u!114 &2757665248450462450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,3 +257,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f8162c72ac5b7f4ab90aaac82693542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animEnemy: {fileID: 1414922890613620733}

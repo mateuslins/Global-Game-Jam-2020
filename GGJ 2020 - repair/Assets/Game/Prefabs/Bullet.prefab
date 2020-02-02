@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2424236825249893622
 Transform:
@@ -149,3 +149,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Velocity: 6
   Enemy: {fileID: 0}
+  animEnemy: {fileID: 0}

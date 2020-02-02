@@ -6,6 +6,7 @@ public class Bullet_Controller : MonoBehaviour
 {
     public float Velocity;
     public GameObject Enemy;
+
     void Start()
     {
     }
@@ -39,7 +40,7 @@ public class Bullet_Controller : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
-            Destroy(collision.gameObject);
+            Enemy.gameObject.GetComponent<EnemyController>().Died();
         }
     }
 }

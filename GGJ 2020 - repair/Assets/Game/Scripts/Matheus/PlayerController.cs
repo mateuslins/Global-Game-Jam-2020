@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     //Animação
     private Animator animPlayer;
     public bool moving;
+
     //inventory
     public static int pieces = 0;
 
@@ -56,7 +57,16 @@ public class PlayerController : MonoBehaviour
     }
     private void Animacao()
     {
-        animPlayer.SetBool("Run", moving);;
+        animPlayer.SetBool("Run", moving);
+    }
+    public void Died()
+    {
+        animPlayer.SetBool("Died", true);   
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene("Scene1");
     }
     void FixedUpdate()
     {
