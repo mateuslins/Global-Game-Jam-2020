@@ -10,8 +10,8 @@ public class Canvas_Controller : MonoBehaviour
     public Button buttonPlay;
     public Button buttonCredits;
     public Button buttonExit;
-    public Animator Creditos;
-
+    public Animator animCredits;
+    public bool CreditsMove;
 
     public void Play()
     {
@@ -20,14 +20,25 @@ public class Canvas_Controller : MonoBehaviour
     }
     public void Credits()
     {
-        Creditos.SetBool("Active",true);
+        CreditsMove = !CreditsMove;
+
+        if (CreditsMove)
+        {
+            animCredits.SetBool("Active", true);
+        }
 
         buttonPlay.interactable = false;
         buttonCredits.interactable = false;
     }
     public void ReturnCredits()
     {
-        Creditos.SetBool("Active", false);
+        CreditsMove = !CreditsMove;
+
+        if (!CreditsMove)
+        {
+            animCredits.SetBool("Active", false);
+        }
+
         buttonPlay.interactable = true;
         buttonCredits.interactable = true;
     }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    private AudioController audioController;
+
     public Rigidbody2D body;
 
     private int killCount = 0;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
+        audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
     }
 
     void Update()
@@ -61,7 +64,9 @@ public class PlayerController : MonoBehaviour
     }
     public void Died()
     {
-        animPlayer.SetBool("Died", true);   
+        animPlayer.SetBool("Died", true);
+        audioController.playSfx(audioController.sfxPlayerDied, 0.5f);
+        audioController.musicSource.Stop();
     }
 
     public void NextScene()
@@ -98,6 +103,7 @@ public class PlayerController : MonoBehaviour
     public void CollectPiece()
     {
         pieces += 1;
+        audioController.playSfx(audioController.sfxPick, 0.8f);
         Debug.Log("O numero de peças é " + pieces);
     }
 
@@ -105,6 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         int aux = pieces;
         pieces = 0;
+        audioController.playSfx(audioController.sfxFixTower, 0.5f);
         Debug.Log("Depositou todas as peças na torre");
         return aux;
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tower_Controller : MonoBehaviour
 {
+    private AudioController audioController;
     [Header("Tower")]
     public GameObject spot;
     public GameObject bullet;
@@ -21,6 +22,7 @@ public class Tower_Controller : MonoBehaviour
     void Start()
     {
         towerAnim = GetComponent<Animator>();
+        audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
     }
     Vector3 lastenemypos;
     void Update()
@@ -39,6 +41,7 @@ public class Tower_Controller : MonoBehaviour
                     return;
                 }
                 Instantiate(bullet, new Vector3(spot.transform.position.x, spot.transform.position.y, spot.transform.position.z), spot.transform.rotation).GetComponent<Bullet_Controller>().Enemy = enemy;
+                audioController.playSfx(audioController.sfxTowerShoot, 0.5f);
                 time = 0;
             }
         }
