@@ -10,7 +10,7 @@ public class Canvas_Controller : MonoBehaviour
     public Button buttonPlay;
     public Button buttonCredits;
     public Button buttonExit;
-    public Animator ScrollView;
+    public Animator Creditos;
 
 
     public void Play()
@@ -20,11 +20,16 @@ public class Canvas_Controller : MonoBehaviour
     }
     public void Credits()
     {
-        ScrollView.SetBool("Active",true);
+        Creditos.SetBool("Active",true);
+
+        buttonPlay.interactable = false;
+        buttonCredits.interactable = false;
     }
     public void ReturnCredits()
     {
-        ScrollView.SetBool("Active", false);
+        Creditos.SetBool("Active", false);
+        buttonPlay.interactable = true;
+        buttonCredits.interactable = true;
     }
     public void Exit()
     {
