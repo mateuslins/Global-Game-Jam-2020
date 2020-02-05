@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower_Controller : MonoBehaviour
 {
@@ -12,7 +13,11 @@ public class Tower_Controller : MonoBehaviour
     public Animator towerAnim;
 
     public PlayerController player;
-    private int pieces = 0;
+    public GameObject loadingPrefab;
+    private Image loadingOutside;
+    private Image loadingInside;
+    private float pieces = 0f;
+    private float maxPieces = 5f;
 
     private void Awake()
     {
@@ -23,12 +28,15 @@ public class Tower_Controller : MonoBehaviour
     {
         towerAnim = GetComponent<Animator>();
         audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
+        loadingOutside = Instantiate(loadingPrefab, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
+        loadingInside = new List<Image>(loadingOutside.GetComponentsInChildren<Image>()).Find(img => img != loadingOutside);
     }
     Vector3 lastenemypos;
     void Update()
     {
-        if (pieces >= 5)
+        if (pieces >= maxPieces)
         {
+            pieces = maxPieces;
             towerAnim.SetBool("isFixed", true);
             time += Time.deltaTime;
 
@@ -45,6 +53,9 @@ public class Tower_Controller : MonoBehaviour
                 time = 0;
             }
         }
+
+        loadingOutside.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.5f, 0));
+        loadingInside.fillAmount = (pieces / maxPieces);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

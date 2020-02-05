@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     private AudioController audioController;
 
     public Rigidbody2D body;
+    public Text keysNumber;
+    public Text killCountText;
 
     private int killCount = 0;
+
     //Animação
     private Animator animPlayer;
     public bool moving;
@@ -57,6 +61,9 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        keysNumber.text = pieces.ToString();
+        killCountText.text = "Killcount: " + killCount.ToString();
     }
     private void Animacao()
     {
@@ -67,6 +74,7 @@ public class PlayerController : MonoBehaviour
         animPlayer.SetBool("Died", true);
         audioController.playSfx(audioController.sfxPlayerDied, 0.5f);
         audioController.musicSource.Stop();
+        pieces = 0;
     }
 
     public void NextScene()
@@ -93,10 +101,10 @@ public class PlayerController : MonoBehaviour
 
     private void WinGame()
     {
-        if (killCount >= 30)
+        if (killCount >= 200)
         {
-            Debug.Log("Você venceu!");
-            SceneManager.LoadScene("Scene1");
+            audioController.musicSource.Stop();
+            SceneManager.LoadScene("Menu");
         }
     }
 
