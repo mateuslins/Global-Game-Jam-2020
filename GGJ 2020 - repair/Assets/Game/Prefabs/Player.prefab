@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6410505701234632707}
   - component: {fileID: 6410505701622420398}
-  - component: {fileID: 6410505701622420399}
   - component: {fileID: 6410505701622420384}
   - component: {fileID: 6410505701622420385}
   - component: {fileID: 7437893602097408619}
+  - component: {fileID: 6410505701622420399}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -85,21 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6410505701622420399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6410505701622420386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a98b37dbc3e024bb59f79e2618b50d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  body: {fileID: 6410505701622420384}
-  moving: 0
-  runSpeed: 6
 --- !u!50 &6410505701622420384
 Rigidbody2D:
   serializedVersion: 4
@@ -156,3 +141,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.01, y: -0.13}
   m_Size: {x: 0.64, y: 1.15}
   m_Direction: 0
+--- !u!114 &6410505701622420399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6410505701622420386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a98b37dbc3e024bb59f79e2618b50d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gamecontroller: {fileID: 0}
+  body: {fileID: 6410505701622420384}
+  keysNumber: {fileID: 0}
+  killCountText: {fileID: 0}
+  moving: 0
+  runSpeed: 6

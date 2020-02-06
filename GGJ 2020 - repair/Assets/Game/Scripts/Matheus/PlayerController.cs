@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private AudioController audioController;
-
     public Rigidbody2D body;
     public Text keysNumber;
     public Text killCountText;
@@ -35,7 +34,16 @@ public class PlayerController : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
     }
+    void FixedUpdate()
+    {
+        if (horizontal != 0 && vertical != 0)
+        {
+            horizontal *= moveLimiter;
+            vertical *= moveLimiter;
+        }
 
+        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
     void Update()
     {
         Animacao();
@@ -73,25 +81,13 @@ public class PlayerController : MonoBehaviour
     {
         animPlayer.SetBool("Died", true);
         audioController.playSfx(audioController.sfxPlayerDied, 0.5f);
-        audioController.musicSource.Stop();
         pieces = 0;
     }
-
-    public void NextScene()
+    void NextScene()
     {
         SceneManager.LoadScene("Menu");
     }
-    void FixedUpdate()
-    {
-        if (horizontal != 0 && vertical != 0)
-        {
-            horizontal *= moveLimiter;
-            vertical *= moveLimiter;
-        }
 
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
-    }
-    
     public void IncreaseKillCount()
     {
         killCount += 1;
@@ -118,8 +114,11 @@ public class PlayerController : MonoBehaviour
     public int DropPieces()
     {
         int aux = pieces;
+        if (pieces > 0)
+        {
+            audioController.playSfx(audioController.sfxFixTower, 0.5f);
+        }
         pieces = 0;
-        audioController.playSfx(audioController.sfxFixTower, 0.5f);
         Debug.Log("Depositou todas as peças na torre");
         return aux;
     }

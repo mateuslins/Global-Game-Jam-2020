@@ -13,20 +13,17 @@ public class AudioController : MonoBehaviour
     public AudioClip sfxPlayerDied;
     public AudioClip sfxTowerShoot;
 
-
     void Awake()
     {
-         DontDestroyOnLoad(this.gameObject);   
-    }
-    private void Start()
-    {
-        if (!musicSource.isPlaying)
+        GameObject[] objts = GameObject.FindGameObjectsWithTag("GameController");
+        if (objts.Length > 1)
         {
-            musicSource.Play();
+            Destroy(this.gameObject);
         }
+        DontDestroyOnLoad(this.gameObject);
     }
     public void playSfx(AudioClip sfxClip,float volume)
     {
         sfxSource.PlayOneShot(sfxClip, volume);
-    }
+    } 
 }

@@ -7,10 +7,6 @@ public class Bullet_Controller : MonoBehaviour
     public float Velocity;
     public GameObject Enemy;
 
-    void Start()
-    {
-    }
-
     Vector3 lastenemypos;
     void Update()
     {

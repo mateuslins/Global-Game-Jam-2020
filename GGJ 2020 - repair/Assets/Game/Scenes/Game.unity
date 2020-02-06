@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 54, y: 189}
+  m_AnchoredPosition: {x: 0, y: 190}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120198196
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -183,7 +183,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38.4, y: -174.3}
+  m_AnchoredPosition: {x: -40, y: -175}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280275943
@@ -305,7 +305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.1, y: -189.9}
+  m_AnchoredPosition: {x: 0, y: -190}
   m_SizeDelta: {x: 1345.305, y: 684.397}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328204936
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -418,7 +418,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -690,7 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACwn+uc5L51WQIAAP4EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty2jAU/RVG65IxJsGlu9YhpIs8prSTjTdCusYaZMmjR4Bk+PdeyQa77gpxzj1X5z7kTyKUbYA5bdZG8CfNgXybkHAmXyY9+QhHutNqIz7gEvMmuKtCEI0xv6gTGvFZkFldgzOCfVc7GYITBL0SpTb1iu8g19ZZhEsqLSBltAtqhdDnhBzxZ7oMkhOe0iycPvC0TCZnPDJQDswgdHGzSNNs/nU1TbJOdJG0Cq+YpHUDPNjvhemii561YQoL6yJCEUxLKWznirhTE6vOaWM91oQBXFCsMlqZ3cwRqEDsKhcyD+UvZWnBdaYMPd0Lg+1q85Ifuu1hTe2+dfZOpYer9Tbl03/sdBbp0uj68XLrLAk3uEqw/S96YtS6QYuH8P3AeGzPgco93Up4q0A967XRXnEknfFB6i2k9/3fa2F5BWzf463VEeibvt/JaDihhnOs/ZhLUW8DdXPbAhupY7/jGoDByfxEw3FJbJcC0eDij4XfdDfcpo54EMY6pLoqVbC31d6EULKKPQvVeJdroyDCnekGFJXu9Ipp3HiAI25w7Yh5oOHddJd33OU5jCQR7uOTZES96sN1WLbShyew1Yt3UijoTQfiGfuUa6Xa/Rr25CLbeFNSNpDtvOD/rhbJ7tIku13CfDtPltuMTheMZixN7rbljPIFcBJ3Tyisk8rX1mjXHpya6pMr3LPL52SyNrSJu84NPazFR60HLReq1BtmANRLm+FqHAxegq+Sr7jABm3AOaHivMlnQaRme+DFNVERK10dnaFFn6UgjXjXLiAFyeP3oyBncv4LUEsDBBQAAAgIAACwn+tqwY2fbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01FFQSi9KLMgoBoqAOaWZKSB2tJK5qZGBuYllqnGSsYFlknmirllyonmykYFpUpphYopZaopSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAALCf65zkvnVZAgAA/gQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAALCf62rBjZ9sAAAAeAAAAAkAJAAAAAAAAAAAAAAApgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABdAwAAAAA=
+    dataString: UEsDBBQAAAgIAACwn+sAYNWkRwIAAPEEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEuP2jAQ/ivI51IFdgHRWwss2wMLWrraCxdjT4iFY0d+LC/x3zt2EhKoemL45puZbx7OhQhlC2BOm7kRfKE5kB8dEmzyrdM4X+FId1qtxRlqzqfgLgskGjnv1AmNeC+EWZ2DM4L9VDsZyAmCXolUm3zGdzDR1lmEUyotoMtoF6IVQpcOOeJPdxxCTmj1R8E6ozVOOlc0GSgHpqHWxJpWsrxikuYF8CC5Ifdrdq8XaQqbqRhBONNSClspIe5UxE7XRQYGQqtcUGwsVg/0DMQucyFtO3aZphZcpcjQ01QYnE+ZlPzS5dByavelrC8qfSjTHwyjpDLp4h9/t1ScGp2/1nV7SajhMsH27/TEqHWtqbbh6b1wrw5U7ulWwmcG6k3PjfaKo9MZH0K9hf60+XtrbZIB2zd4KfUB9MX/dxN6uMbujxMp8m1wfX8ugbXUcdxx82BwMb9RcLwLW6VANKj4sPCH7toHVDlehLEOXVWXKsjbam8ClczizEI33k20URDhSnQBikp3WmEa97jCB1+r7IPnhYanUhWvfPULeAiJcMNPkgfXSh9uy7KZPizAZkvvpFDQiA6ON5zTRCtVXlh7JnXY2puUslbYzgt+f1pkNOgno+cxPG2fkvF2RLtDRkesnwy2aY/yIXASb08o7JPKVSm0Gg9urT0ThYdWf0I6c0OLeO7c0MNcnHPdmrlQqV4zA6CW9yksGKyCr5LPuMAJrcE5oeLCyWVDpGZ74Jtbok1sdXZ0hrbBQnxpF4ANmcRPxoZcyfUvUEsDBBQAAAgIAACwn+tqwY2fbAAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01FFQSi9KLMgoBoqAOaWZKSB2tJK5qZGBuYllqnGSsYFlknmirllyonmykYFpUpphYopZaopSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAALCf6wBg1aRHAgAA8QQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAALCf62rBjZ9sAAAAeAAAAAkAJAAAAAAAAAAAAAAAlAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABLAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -754,7 +754,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -762,7 +762,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 1
+  showGraphs: 0
 --- !u!4 &704186354
 Transform:
   m_ObjectHideFlags: 0
@@ -771,7 +771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704186352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.41047522, y: 0.143497, z: -1.2191621}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
