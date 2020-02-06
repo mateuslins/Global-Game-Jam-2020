@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SplashController : MonoBehaviour
 {
     public float time;
+
     void Update()
     {
         time += Time.deltaTime;

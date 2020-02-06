@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Canvas_Controller : MonoBehaviour
 {
+    public LevelLoader levelLoader;
     [Header("Menu")]
     public Button buttonPlay;
     public Button buttonCredits;
@@ -15,7 +16,7 @@ public class Canvas_Controller : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        levelLoader.LoadNextScene();
         Cursor.visible = false;
     }
     public void Credits()
