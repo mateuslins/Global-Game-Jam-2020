@@ -16,7 +16,7 @@ public class Canvas_Controller : MonoBehaviour
 
     public void Play()
     {
-        levelLoader.LoadNextScene();
+        levelLoader.LoadNextScene(1);
         Cursor.visible = false;
     }
     public void Credits()

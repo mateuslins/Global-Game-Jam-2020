@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private AudioController audioController;
+    public LevelLoader levelLoader;
     public Rigidbody2D body;
     public Text keysNumber;
     public Text killCountText;
@@ -77,18 +78,17 @@ public class PlayerController : MonoBehaviour
     {
         animPlayer.SetBool("Run", moving);
     }
+    public void NextScene()
+    {
+        levelLoader.LoadNextScene(-1);
+    }
     public void Died()
     {
         animPlayer.SetBool("Died", true);
         audioController.playSfx(audioController.sfxPlayerDied, 0.5f);
         pieces = 0;
     }
-    void NextScene()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void IncreaseKillCount()
+        public void IncreaseKillCount()
     {
         killCount += 1;
         Debug.Log("numero de kills: " + killCount);
@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
         if (killCount >= 200)
         {
             audioController.musicSource.Stop();
-            SceneManager.LoadScene("Menu");
+            levelLoader.LoadNextScene(1);
         }
     }
 

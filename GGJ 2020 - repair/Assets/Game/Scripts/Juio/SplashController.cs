@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SplashController : MonoBehaviour
 {
+    public LevelLoader levelLoader;
     public float time;
 
     void Update()
@@ -13,7 +14,7 @@ public class SplashController : MonoBehaviour
 
         if (time >= 4f)
         {
-            SceneManager.LoadScene("Menu");
+            levelLoader.LoadNextScene(1);
         }
     }
 }
