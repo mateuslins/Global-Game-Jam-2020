@@ -40,7 +40,7 @@ public class Tower_Controller : MonoBehaviour
             towerAnim.SetBool("isFixed", true);
             time += Time.deltaTime;
 
-            if (time >= 1.5f)
+            if (time >= 2.5f)
             {
                 var enemy = GameObject.FindWithTag("Enemy");
                 if (enemy == null)
@@ -61,8 +61,11 @@ public class Tower_Controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            pieces += player.DropPieces();
-            Debug.Log("o numero de peças na torre é " + pieces);
+            if (pieces < maxPieces)
+            {
+                pieces += player.DropPieces();
+                Debug.Log("o numero de peças na torre é " + pieces);
+            }
         }
     }
 }

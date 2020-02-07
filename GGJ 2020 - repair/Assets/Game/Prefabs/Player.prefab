@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6410505701622420385}
   - component: {fileID: 7437893602097408619}
   - component: {fileID: 6410505701622420399}
+  - component: {fileID: 7525533503806325978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -153,9 +154,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5a98b37dbc3e024bb59f79e2618b50d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamecontroller: {fileID: 0}
+  levelLoader: {fileID: 0}
   body: {fileID: 6410505701622420384}
   keysNumber: {fileID: 0}
   killCountText: {fileID: 0}
   moving: 0
   runSpeed: 6
+--- !u!114 &7525533503806325978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6410505701622420386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ea86e440c262641820b1d6c45bcb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

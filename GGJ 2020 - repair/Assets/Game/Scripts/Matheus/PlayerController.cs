@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         animPlayer = GetComponent<Animator>();
         audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
     }
+
     void FixedUpdate()
     {
         if (horizontal != 0 && vertical != 0)
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+
     void Update()
     {
         Animacao();
@@ -74,14 +76,22 @@ public class PlayerController : MonoBehaviour
         keysNumber.text = pieces.ToString();
         killCountText.text = "Killcount: " + killCount.ToString();
     }
+
+    public int getKillCount()
+    {
+        return killCount;
+    }
+
     private void Animacao()
     {
         animPlayer.SetBool("Run", moving);
     }
+
     public void NextScene()
     {
         levelLoader.LoadNextScene(-1);
     }
+
     public void Died()
     {
         animPlayer.SetBool("Died", true);
@@ -97,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
     private void WinGame()
     {
-        if (killCount >= 200)
+        if (killCount >= 100)
         {
             audioController.musicSource.Stop();
             levelLoader.LoadNextScene(1);
