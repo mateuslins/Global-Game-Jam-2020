@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
 
         keysNumber.text = pieces.ToString();
-        killCountText.text = "Killcount: " + killCount.ToString();
+        killCountText.text = killCount.ToString();
     }
 
     public int getKillCount()

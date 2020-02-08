@@ -13,9 +13,7 @@ public class Tower_Controller : MonoBehaviour
     public Animator towerAnim;
 
     public PlayerController player;
-    public GameObject loadingPrefab;
-    private Image loadingOutside;
-    private Image loadingInside;
+    public Image loadingInside;
     private float pieces = 0f;
     private float maxPieces = 5f;
 
@@ -28,8 +26,6 @@ public class Tower_Controller : MonoBehaviour
     {
         towerAnim = GetComponent<Animator>();
         audioController = FindObjectOfType(typeof(AudioController)) as AudioController;
-        loadingOutside = Instantiate(loadingPrefab, FindObjectOfType<Canvas>().transform).GetComponent<Image>();
-        loadingInside = new List<Image>(loadingOutside.GetComponentsInChildren<Image>()).Find(img => img != loadingOutside);
     }
     Vector3 lastenemypos;
     void Update()
@@ -54,7 +50,6 @@ public class Tower_Controller : MonoBehaviour
             }
         }
 
-        loadingOutside.transform.position = Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, -1.5f, 0));
         loadingInside.fillAmount = (pieces / maxPieces);
     }
     private void OnCollisionEnter2D(Collision2D collision)
