@@ -7,11 +7,14 @@ public class AudioController : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource musicSource;
 
-    public AudioClip sfxFixTower;
-    public AudioClip sfxPick;
-    public AudioClip sfxEnemyDied;
     public AudioClip sfxPlayerDied;
-    public AudioClip sfxTowerShoot;
+    public AudioClip sfxWin;
+    public AudioClip sfxLose;
+    public AudioClip sfxButton;
+    public AudioClip[] sfxFixTower;
+    public AudioClip[] sfxPick;
+    public AudioClip[] sfxEnemyDied;
+    public AudioClip[] sfxTowerShoot;
 
     void Awake()
     {

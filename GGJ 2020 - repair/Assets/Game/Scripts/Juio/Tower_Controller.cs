@@ -45,7 +45,7 @@ public class Tower_Controller : MonoBehaviour
                     return;
                 }
                 Instantiate(bullet, new Vector3(spot.transform.position.x, spot.transform.position.y, spot.transform.position.z), spot.transform.rotation).GetComponent<Bullet_Controller>().Enemy = enemy;
-                audioController.playSfx(audioController.sfxTowerShoot, 0.5f);
+                audioController.playSfx(audioController.sfxTowerShoot[Random.Range(0,audioController.sfxTowerShoot.Length)], 0.5f);
                 time = 0;
             }
         }

@@ -87,9 +87,9 @@ public class PlayerController : MonoBehaviour
         animPlayer.SetBool("Run", moving);
     }
 
-    public void NextScene()
+    public void DiedScene()
     {
-        levelLoader.LoadNextScene(-1);
+        levelLoader.LoadNextScene(2);
     }
 
     public void Died()
@@ -98,10 +98,9 @@ public class PlayerController : MonoBehaviour
         audioController.playSfx(audioController.sfxPlayerDied, 0.5f);
         pieces = 0;
     }
-        public void IncreaseKillCount()
+    public void IncreaseKillCount()
     {
         killCount += 1;
-        Debug.Log("numero de kills: " + killCount);
         WinGame();
     }
 
@@ -109,7 +108,6 @@ public class PlayerController : MonoBehaviour
     {
         if (killCount >= 100)
         {
-            audioController.musicSource.Stop();
             levelLoader.LoadNextScene(1);
         }
     }
@@ -117,19 +115,16 @@ public class PlayerController : MonoBehaviour
     public void CollectPiece()
     {
         pieces += 1;
-        audioController.playSfx(audioController.sfxPick, 0.8f);
-        Debug.Log("O numero de peças é " + pieces);
+        audioController.playSfx(audioController.sfxPick[Random.Range(0,audioController.sfxPick.Length)], 0.8f);
     }
-
     public int DropPieces()
     {
         int aux = pieces;
         if (pieces > 0)
         {
-            audioController.playSfx(audioController.sfxFixTower, 0.5f);
+            audioController.playSfx(audioController.sfxFixTower[Random.Range(0,audioController.sfxFixTower.Length)], 0.5f);
         }
         pieces = 0;
-        Debug.Log("Depositou todas as peças na torre");
         return aux;
     }
     void Flip()

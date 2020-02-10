@@ -77,6 +77,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
+    - Class: 62
+      Script: {instanceID: 0}
     - Class: 70
       Script: {instanceID: 0}
     - Class: 74
@@ -129,6 +131,67 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13278}
     - Class: 114
       Script: {instanceID: 13292}
+    - Class: 114
+      Script: {instanceID: 13526}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Game/Scenes/Lose.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11198}
+    - Class: 114
+      Script: {instanceID: 11390}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 114
+      Script: {instanceID: 11548}
+    - Class: 114
+      Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 12456}
+    - Class: 114
+      Script: {instanceID: 12776}
+    - Class: 114
+      Script: {instanceID: 13066}
     - Class: 114
       Script: {instanceID: 13526}
     - Class: 115
@@ -273,7 +336,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 225
       Script: {instanceID: 0}
-    Assets/Game/Scenes/WIN.unity:
+    Assets/Game/Scenes/Win.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -299,11 +362,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11198}
     - Class: 114
+      Script: {instanceID: 11390}
+    - Class: 114
       Script: {instanceID: 11432}
     - Class: 114
       Script: {instanceID: 11548}
     - Class: 114
       Script: {instanceID: 11892}
+    - Class: 114
+      Script: {instanceID: 12456}
     - Class: 114
       Script: {instanceID: 12776}
     - Class: 114
@@ -311,6 +378,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13526}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -457,7 +526,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: a40697f5dbe0536981ddae4145e99e45
+      Hash: 579d9db40810f9f0656261fb33828330
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Canvas_Controller
@@ -697,7 +766,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 4e6d5d282658bc5c7618bd5b4ca304f6
+      Hash: f5b80fa97739ed894fd2865e167d0370
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AudioController
@@ -895,7 +964,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 191e9e3d99f6a33ce8f02a70fed4abde
+      Hash: d5d18a6abbaa2911bf779c42f7fc5d37
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tower_Controller
@@ -1024,5 +1093,6 @@ ScriptsOnlyBuild:
   - Assets/Game/Scenes/Splash.unity
   - Assets/Game/Scenes/Menu.unity
   - Assets/Game/Scenes/Game.unity
-  - Assets/Game/Scenes/WIN.unity
-  playerPath: C:/Users/Julio/Desktop/Build 1/MECATRON.exe
+  - Assets/Game/Scenes/Win.unity
+  - Assets/Game/Scenes/Lose.unity
+  playerPath: C:/Users/Julio/Desktop/Build 1.6/MECATRON.exe

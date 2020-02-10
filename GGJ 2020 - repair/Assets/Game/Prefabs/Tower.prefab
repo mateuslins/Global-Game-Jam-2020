@@ -298,7 +298,6 @@ MonoBehaviour:
   time: 0
   towerAnim: {fileID: 0}
   player: {fileID: 0}
-  loadingOutside: {fileID: 0}
   loadingInside: {fileID: 8152983711125422176}
 --- !u!70 &5594195299543766725
 CapsuleCollider2D:
@@ -313,8 +312,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.021492481, y: -0.46853638}
-  m_Size: {x: 0.624053, y: 1.4285135}
+  m_Offset: {x: -0.00046542287, y: -0.8049691}
+  m_Size: {x: 0.72217923, y: 0.75564814}
   m_Direction: 0
 --- !u!1 &4994068247071327649
 GameObject:

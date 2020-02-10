@@ -283,10 +283,10 @@ RectTransform:
   m_Father: {fileID: 1485324990}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 45}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320779085
 MonoBehaviour:
@@ -451,6 +451,9 @@ MonoBehaviour:
   buttonExit: {fileID: 1485324991}
   animCredits: {fileID: 1986305614}
   CreditsMove: 0
+  buttonMenu: {fileID: 0}
+  buttonPlayAgain: {fileID: 0}
+  buttonBackMenu: {fileID: 0}
 --- !u!1 &400864090
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -24}
+  m_AnchoredPosition: {x: -9, y: -20}
   m_SizeDelta: {x: 30, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400864092
@@ -613,10 +616,10 @@ RectTransform:
   m_Father: {fileID: 793356227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 120, y: 45}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &468939432
 MonoBehaviour:
@@ -1057,7 +1060,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 85af295fd85d07941a94ca7a9f9cec8a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4ec4231d38d4c3b40a24678a3f230169, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1189,10 +1192,10 @@ RectTransform:
   m_Father: {fileID: 400864091}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 2.1000004}
+  m_SizeDelta: {x: 0, y: -4.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &841041540
 MonoBehaviour:
@@ -1393,10 +1396,10 @@ RectTransform:
   m_Father: {fileID: 18309014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 240, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1261096960
 MonoBehaviour:
@@ -1429,7 +1432,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CREDITOS
+  m_Text: CREDITS
 --- !u!222 &1261096961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1469,11 +1472,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sfxSource: {fileID: 1031458905}
   musicSource: {fileID: 806705255}
-  sfxFixTower: {fileID: 8300000, guid: 512152b9844c49a409983772ecba87d2, type: 3}
-  sfxPick: {fileID: 8300000, guid: 5af92c99b3c075945b256e90b3ab03ca, type: 3}
-  sfxEnemyDied: {fileID: 8300000, guid: 6fbc0407c678af548bb3e16489962798, type: 3}
-  sfxPlayerDied: {fileID: 8300000, guid: d42948b23674ca44ea332db27eee2933, type: 3}
-  sfxTowerShoot: {fileID: 8300000, guid: dfccfdf94b458eb4281867ae0e5ca15a, type: 3}
+  sfxPlayerDied: {fileID: 8300000, guid: 6699d31fc7c5e9c41b463d52154d7cbe, type: 3}
+  sfxWin: {fileID: 8300000, guid: fb73c25c04d1b9249a422e11c6b31809, type: 3}
+  sfxLose: {fileID: 8300000, guid: 86221918019b34648b0671baf87ff3de, type: 3}
+  sfxButton: {fileID: 8300000, guid: 480ff16a9a3b4364ea8ed5a16de4a256, type: 3}
+  sfxFixTower:
+  - {fileID: 8300000, guid: c309a48017c756f4981c76e4aa396031, type: 3}
+  - {fileID: 8300000, guid: 4389f18f2414ba94ab35e04efa7e7efe, type: 3}
+  - {fileID: 8300000, guid: 58d0879364a62f74e994bdf1c9179077, type: 3}
+  sfxPick:
+  - {fileID: 8300000, guid: 5c81a9c38264639448b4fc7a3b0f8627, type: 3}
+  - {fileID: 8300000, guid: 92d4b92e886ec694bb936e55415b27ac, type: 3}
+  - {fileID: 8300000, guid: 2970cf174e9ea0349a4c87c590844352, type: 3}
+  sfxEnemyDied:
+  - {fileID: 8300000, guid: d5dca77327dfb10448c8789179a2412e, type: 3}
+  - {fileID: 8300000, guid: c83be41928c51a2468df0419e20fa33d, type: 3}
+  - {fileID: 8300000, guid: 53cb570370babf24988d9982badeef1c, type: 3}
+  sfxTowerShoot:
+  - {fileID: 8300000, guid: 42870c58fad7d7d428dbc6e6b7238412, type: 3}
+  - {fileID: 8300000, guid: de9b77460f94fdd4ebff4578122ddc6d, type: 3}
+  - {fileID: 8300000, guid: f787af1a2a8d39541b6c2cb808d8b00f, type: 3}
 --- !u!4 &1466207100
 Transform:
   m_ObjectHideFlags: 0
@@ -1654,8 +1672,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.4974976, y: 0.000015258789}
-  m_SizeDelta: {x: -4.995, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1}
+  m_SizeDelta: {x: -10.000006, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579715209
 MonoBehaviour:

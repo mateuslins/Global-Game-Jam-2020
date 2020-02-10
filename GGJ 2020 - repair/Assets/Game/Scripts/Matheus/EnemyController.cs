@@ -27,6 +27,6 @@ public class EnemyController : MonoBehaviour
     {
         player.IncreaseKillCount();
         animEnemy.SetBool("Died", true);
-        audioController.playSfx(audioController.sfxEnemyDied, 0.5f);
+        audioController.playSfx(audioController.sfxEnemyDied[Random.Range(0,audioController.sfxEnemyDied.Length)], 0.5f);
     }
 }
